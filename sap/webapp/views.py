@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def bienvenido(request):
-    return HttpResponse("Hola mundo")
+    return render(request, 'bienvenido.html')
