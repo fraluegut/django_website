@@ -91,14 +91,15 @@ body, html {
   <h3 class="w3-center">SOBRE MÍ</h3>
   <p class="w3-center"><em>Python Developper</em></p>
   <p>El número de registro que tenemos es de: {{no_personas}}.
-        <table class="egt">
+        <table border="1">
 
       <tr>
-        <th>Nombre</th>
+        <th>Id</th>
         <th>Nombre</th>
         <th>Apellido</th>
         <th>Email</th>
-        <th>Detalles</th>
+        <th></th>
+        <th></th>
       </tr>
       {% for persona in personas %}
         <tr>
@@ -107,7 +108,8 @@ body, html {
         <td>{{persona.apellido}}</td>
         <td>{{persona.email}}</td>
         <td><a href="detalle_persona/{{persona.id}}">Ver detalle</a></td>
-
+        <td><a href="editar_persona/{{persona.id}}">Editar</a></td>
+        <td><a href="eliminar_persona/{{persona.id}}">Eliminar</a></td>
 
       </tr>
       {% endfor %}
